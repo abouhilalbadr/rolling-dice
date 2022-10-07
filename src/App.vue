@@ -3,7 +3,7 @@
   import Dice from './components/Dice.vue'
 
   const numberDice = ref(1)
-  const dicesGenerated = ref()
+  const dicesGenerated = ref([])
 
   // Generate Random Number
   const randomIntFromInterval = (min, max) => {
