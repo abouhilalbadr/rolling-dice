@@ -10,7 +10,14 @@
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
+  // Role the dices
   const roleDice = () => {
+    let intervalId = setInterval(generateDice, 200)
+    setTimeout(() => clearInterval(intervalId), 2000);
+  }
+
+  // Generate Dices
+  const generateDice = () => {
     // Reset Generated Dices
     dicesGenerated.value = []
     // Generate number of dices by @numberDice
@@ -18,7 +25,6 @@
       const randomNumber = randomIntFromInterval(1, 6)
       dicesGenerated.value.push(randomNumber)
     }
-    // TODO: Role the dices
   }
 </script>
 
@@ -38,7 +44,7 @@
         <button type="submit" class="w-full bg-blue-400 text-white flex justify-center items-center h-12 rounded-md">Roll</button>
       </div>
     </form>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-3 gap-6">
       <div
         v-for="(item, i) in dicesGenerated"
         :key="i"
