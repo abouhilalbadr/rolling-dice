@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.second-face .dot:nth-of-type(2),
+.third-face .dot:nth-of-type(3) {
+  @apply self-end;
+}
+.third-face .dot:nth-of-type(2) {
+  @apply self-center
+}
+
+.fourth-face .dot,
+.fifth-face .dot,
+.sixth-face .dot {
+  @apply flex justify-start;
+}
+
+.fourth-face .dot:nth-of-type(3),
+.fourth-face .dot:nth-of-type(4),
+.fifth-face .dot:nth-of-type(3),
+.fifth-face .dot:nth-of-type(4),
+.sixth-face .dot:nth-of-type(5),
+.sixth-face .dot:nth-of-type(6) {
+  @apply items-end;
+}
+
+.fourth-face .dot:nth-of-type(2),
+.fourth-face .dot:nth-of-type(4),
+.fifth-face .dot:nth-of-type(2),
+.fifth-face .dot:nth-of-type(4),
+.sixth-face .dot:nth-of-type(2),
+.sixth-face .dot:nth-of-type(4),
+.sixth-face .dot:nth-of-type(6) {
+  @apply justify-end;
+}
+
+.fifth-face .dot:nth-of-type(5) {
+  @apply absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2;
+}
+
+.sixth-face .dot:nth-of-type(3),
+.sixth-face .dot:nth-of-type(4) {
+  @apply items-center;
+}
